@@ -9,50 +9,54 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">
-        <h1>Татарская школа футбола</h1>
-    </div>
-    
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Тренировки</a></li>
-            <li><a href="goods.html">Форма</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    
-    <div id="content">
-        <h2>Тренировочные программы</h2>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">Татарская школа футбола</div>
+        </header>
         
-        <div>
-            <h3>Детская группа (6-10 лет)</h3>
-            <p>Основы футбола, развитие координации, работа с мячом</p>
-            <p><strong>Расписание:</strong> Пн, Ср, Пт - 16:00-17:30</p>
-        </div>
-        
-        <div>
-            <h3>Юношеская группа (11-15 лет)</h3>
-            <p>Техническая подготовка, тактика, физическое развитие</p>
-            <p><strong>Расписание:</strong> Вт, Чт, Сб - 17:00-19:00</p>
-        </div>
-        
-        <div>
-            <h3>Взрослая группа (16+ лет)</h3>
-            <p>Профессиональная подготовка, участие в турнирах</p>
-            <p><strong>Расписание:</strong> Пн-Пт - 19:00-21:00</p>
-        </div>
-        
-        <div>
-            <h3>Индивидуальные тренировки</h3>
-            <p>Персональные занятия с тренером</p>
-            <p><strong>Расписание:</strong> По договоренности</p>
-        </div>
-    </div>
-    
-    <div id="footer">
-        <p>&copy; 2025 Татарская школа футбола. Все права защищены.</p>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">Новости</a></li>
+                <li class="nav-item"><a href="practices.html" class="nav-link">Тренировки</a></li>
+                <li class="nav-item"><a href="goods.html" class="nav-link">Форма</a></li>
+                <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1 class="page-title">Тренировочные программы</h1>
+            
+            <div class="practices-container">
+                <div class="practice-item">
+                    <h2 class="practice-title">Детская группа (6-10 лет)</h2>
+                    <p class="practice-desc">Основы футбола, развитие координации, работа с мячом<br>
+                    <strong>Расписание:</strong> Пн, Ср, Пт - 16:00-17:30</p>
+                </div>
+                
+                <div class="practice-item">
+                    <h2 class="practice-title">Юношеская группа (11-15 лет)</h2>
+                    <p class="practice-desc">Техническая подготовка, тактика, физическое развитие<br>
+                    <strong>Расписание:</strong> Вт, Чт, Сб - 17:00-19:00</p>
+                </div>
+                
+                <div class="practice-item">
+                    <h2 class="practice-title">Взрослая группа (16+ лет)</h2>
+                    <p class="practice-desc">Профессиональная подготовка, участие в турнирах<br>
+                    <strong>Расписание:</strong> Пн-Пт - 19:00-21:00</p>
+                </div>
+                
+                <div class="practice-item">
+                    <h2 class="practice-title">Индивидуальные тренировки</h2>
+                    <p class="practice-desc">Персональные занятия с тренером<br>
+                    <strong>Расписание:</strong> По договоренности</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">&copy; 2025 Татарская школа футбола. Все права защищены.</div>
+        </footer>
     </div>
 </body>
 </html>

@@ -9,50 +9,54 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">
-        <h1>Татарская школа футбола</h1>
-    </div>
-    
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Тренировки</a></li>
-            <li><a href="goods.html">Форма</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    
-    <div id="content">
-        <h2>Форма и экипировка</h2>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">Татарская школа футбола</div>
+        </header>
         
-        <div>
-            <img src="../images/domforma.webp" alt="Игровая форма" width="200">
-            <h3>Игровая форма домашняя</h3>
-            <p>Цена: 2500 руб.</p>
-        </div>
-        
-        <div>
-            <img src="../images/footforma.webp" alt="Тренировочная форма" width="200">
-            <h3>Тренировочный костюм</h3>
-            <p>Цена: 1800 руб.</p>
-        </div>
-        
-        <div>
-            <img src="../images/cross.webp" alt="Футбольные бутсы" width="200">
-            <h3>Футбольные бутсы</h3>
-            <p>Цена: 3200 руб.</p>
-        </div>
-        
-        <div>
-            <img src="../images/bol.jpg" alt="Футбольный мяч" width="200">
-            <h3>Официальный мяч школы</h3>
-            <p>Цена: 1500 руб.</p>
-        </div>
-    </div>
-    
-    <div id="footer">
-        <p>&copy; 2025 Татарская школа футбола. Все права защищены.</p>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">Новости</a></li>
+                <li class="nav-item"><a href="practices.html" class="nav-link">Тренировки</a></li>
+                <li class="nav-item"><a href="goods.html" class="nav-link">Форма</a></li>
+                <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1 class="page-title">Форма и экипировка</h1>
+            
+            <div class="goods-container">
+                <div class="goods-card">
+                    <img src="../images/domforma.webp" alt="Игровая форма" class="goods-image">
+                    <h3 class="goods-title">Игровая форма домашняя</h3>
+                    <p class="goods-price">Цена: 2500 руб.</p>
+                </div>
+                
+                <div class="goods-card">
+                    <img src="../images/footforma.webp" alt="Тренировочная форма" class="goods-image">
+                    <h3 class="goods-title">Тренировочный костюм</h3>
+                    <p class="goods-price">Цена: 1800 руб.</p>
+                </div>
+                
+                <div class="goods-card">
+                    <img src="../images/cross.webp" alt="Футбольные бутсы" class="goods-image">
+                    <h3 class="goods-title">Футбольные бутсы</h3>
+                    <p class="goods-price">Цена: 3200 руб.</p>
+                </div>
+                
+                <div class="goods-card">
+                    <img src="../images/bol.jpg" alt="Футбольный мяч" class="goods-image">
+                    <h3 class="goods-title">Официальный мяч школы</h3>
+                    <p class="goods-price">Цена: 1500 руб.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">&copy; 2025 Татарская школа футбола. Все права защищены.</div>
+        </footer>
     </div>
 </body>
 </html>

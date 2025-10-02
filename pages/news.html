@@ -9,47 +9,51 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">
-        <h1>Татарская школа футбола</h1>
-    </div>
-    
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Тренировки</a></li>
-            <li><a href="goods.html">Форма</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
-    
-    <div id="content">
-        <h2>Последние новости</h2>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-content">Татарская школа футбола</div>
+        </header>
         
-        <div>
-            <h3>Открытие нового футбольного сезона</h3>
-            <p><em>15.01.2026 10:00 Тренерский состав</em></p>
-            <p>Мы рады объявить о начале нового футбольного сезона! Тренировки начинаются с 20 января. 
-               Ждем всех наших учеников на традиционном открытом уроке.</p>
-        </div>
-        
-        <div>
-            <h3>Победа на региональном турнире</h3>
-            <p><em>10.01.2025 14:30 Администрация</em></p>
-            <p>Наша юношеская команда заняла первое место в региональном турнире "Кубок Поволжья". 
-               Гордимся нашими спортсменами и их достижениями!</p>
-        </div>
-        
-        <div>
-            <h3>Мастер-класс от звезды футбола</h3>
-            <p><em>05.01.2026 11:15 Пресс-служба</em></p>
-            <p>В феврале состоится мастер-класс от известного футболиста. Следите за расписанием 
-               и не упустите возможность поучиться у профессионала!</p>
-        </div>
-    </div>
-    
-    <div id="footer">
-        <p>&copy; 2025 Татарская школа футбола. Все права защищены.</p>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link">Новости</a></li>
+                <li class="nav-item"><a href="practices.html" class="nav-link">Тренировки</a></li>
+                <li class="nav-item"><a href="goods.html" class="nav-link">Форма</a></li>
+                <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1 class="page-title">Последние новости</h1>
+            
+            <div class="news-container">
+                <div class="news-item">
+                    <h2 class="news-title">Открытие нового футбольного сезона</h2>
+                    <p class="news-meta">15.01.2026 10:00 Тренерский состав</p>
+                    <p class="news-text">Мы рады объявить о начале нового футбольного сезона! Тренировки начинаются с 20 января. 
+                       Ждем всех наших учеников на традиционном открытом уроке.</p>
+                </div>
+                
+                <div class="news-item">
+                    <h2 class="news-title">Победа на региональном турнире</h2>
+                    <p class="news-meta">10.01.2025 14:30 Администрация</p>
+                    <p class="news-text">Наша юношеская команда заняла первое место в региональном турнире "Кубок Поволжья". 
+                       Гордимся нашими спортсменами и их достижениями!</p>
+                </div>
+                
+                <div class="news-item">
+                    <h2 class="news-title">Мастер-класс от звезды футбола</h2>
+                    <p class="news-meta">05.01.2026 11:15 Пресс-служба</p>
+                    <p class="news-text">В феврале состоится мастер-класс от известного футболиста. Следите за расписанием 
+                       и не упустите возможность поучиться у профессионала!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">&copy; 2025 Татарская школа футбола. Все права защищены.</div>
+        </footer>
     </div>
 </body>
 </html>
