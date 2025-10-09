@@ -1,8 +1,8 @@
 :root {
-    --color-primary: #3498db;
-    --color-primary-hover: #2980b9;
-    --color-secondary: #2ecc71;
-    --color-accent: #e74c3c;
+    --color-primary: #2c3e50;
+    --color-primary-hover: #34495e;
+    --color-secondary: #e74c3c;
+    --color-accent: #3498db;
     --color-background: #ecf0f1;
     --color-surface: #ffffff;
     --color-text: #2c3e50;
@@ -35,15 +35,15 @@
 }
 
 [data-theme="dark"] {
-    --color-primary: #3498db;
-    --color-primary-hover: #2980b9;
-    --color-secondary: #27ae60;
-    --color-accent: #e74c3c;
-    --color-background: #1a1a1a;
-    --color-surface: #2d2d2d;
+    --color-primary: #34495e;
+    --color-primary-hover: #2c3e50;
+    --color-secondary: #c0392b;
+    --color-accent: #2980b9;
+    --color-background: #2c3e50;
+    --color-surface: #34495e;
     --color-text: #ecf0f1;
     --color-text-light: #bdc3c7;
-    --color-border: #34495e;
+    --color-border: #7f8c8d;
 }
 
 * {
@@ -150,6 +150,12 @@ body {
     padding: var(--spacing-xl);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.profile__card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .profile__photo {
@@ -219,17 +225,16 @@ body {
     transform: translateY(-3px);
 }
 
-.skill--html {
-    background: #e34c26;
+.skill--champion {
+    background: #27ae60;
 }
 
-.skill--css {
-    background: #264de4;
+.skill--cup {
+    background: #3498db;
 }
 
-.skill--js {
-    background: #f0db4f;
-    color: #2c3e50;
+.skill--supercup {
+    background: #e74c3c;
 }
 
 .projects__title {
@@ -310,11 +315,11 @@ body {
 }
 
 .product-card--sale .product-card__badge {
-    background: var(--color-accent);
+    background: var(--color-secondary);
 }
 
 .product-card--new .product-card__badge {
-    background: var(--color-secondary);
+    background: var(--color-accent);
 }
 
 .product-card__image {

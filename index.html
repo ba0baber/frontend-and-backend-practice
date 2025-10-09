@@ -4,116 +4,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Татарстан Футбол - Главная</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
-<body data-theme="light">
-<div class="page">
-
-    <header class="header">
-        <h1 class="header__title">Татарстан Футбол</h1>
-        <button class="theme-toggle" id="themeToggle">
-            <span class="theme-toggle__icon">🌙</span>
-            <span class="theme-toggle__text">Тёмная тема</span>
-        </button>
-    </header>
-
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item nav__item--active">
-                <a class="nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="pages/news.html">Новости</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="pages/contacts.html">Контакты</a>
-            </li>
-        </ul>
-    </nav>
-
-    <main class="main">
-
-        <section class="profile">
-            <div class="profile__card">
-                <img class="profile__photo" src="images/akbars.png" alt="ФК Ак Барс">
-                <div class="profile__info">
-                    <h2 class="profile__name">ФК Ак Барс</h2>
-                    <p class="profile__group">Основан в 1958 году</p>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Татарстан Футбол</h1>
+                        <p class="mb-0 opacity-75">Официальный сайт футбольных клубов Татарстана</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">С 1958 года</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </header>
 
-        <section class="about">
-            <h2 class="about__title">О клубе</h2>
-            <div class="about__content">
-                <p class="about__text">
-                    Казанский футбольный клуб «Ак Барс» - один из ведущих футбольных клубов Татарстана. 
-                    Многократный чемпион Премьер-лиги, обладатель Кубка России. Домашний стадион - «Ак Барс Арена».
-                </p>
-            </div>
-        </section>
-
-        <section class="skills">
-            <h2 class="skills__title">Достижения</h2>
-            <div class="skills__list">
-                <div class="skill skill--html">
-                    <span class="skill__name">Чемпион РФ</span>
-                </div>
-                <div class="skill skill--css">
-                    <span class="skill__name">Кубок России</span>
-                </div>
-                <div class="skill skill--js">
-                    <span class="skill__name">Суперкубок</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="projects">
-            <h2 class="projects__title">Ближайшие матчи</h2>
-            <div class="projects__grid">
-                <div class="project-card">
-                    <h3 class="project-card__title">Ак Барс - Спартак</h3>
-                    <p class="project-card__desc">15 ноября, 19:00, Ак Барс Арена</p>
-                </div>
-                <div class="project-card">
-                    <h3 class="project-card__title">Зенит - Ак Барс</h3>
-                    <p class="project-card__desc">22 ноября, 18:30, Газпром Арена</p>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/goods.html">
+                                <i class="bi bi-cart me-1"></i>Магазин
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </nav>
 
-        <section class="products">
-            <h2 class="products__title">Фанатская атрибутика</h2>
-            <div class="products__grid">
-                <div class="product-card product-card--sale">
-                    <div class="product-card__badge">Скидка 20%</div>
-                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Форма клуба">
-                    <h3 class="product-card__title">Игровая форма</h3>
-                    <p class="product-card__price">
-                        <span class="product-card__price-old">5000 ₽</span>
-                        <span class="product-card__price-current">4000 ₽</span>
-                    </p>
-                    <button class="product-card__button">Купить</button>
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Profile Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="images/akbars.png" alt="ФК Ак Барс" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="card-title h4 text-primary">ФК Ак Барс Казань</h2>
+                                <p class="card-text text-muted mb-2">
+                                    <i class="bi bi-trophy-fill text-primary"></i>
+                                    Основан в 1958 году
+                                </p>
+                                <p class="card-text">
+                                    Ведущий футбольный клуб Татарстана, многократный чемпион России, обладатель Кубка страны
+                                </p>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <span class="badge bg-primary">Чемпион РФ</span>
+                                    <span class="badge bg-success">Кубок России</span>
+                                    <span class="badge bg-info">Суперкубок</span>
+                                    <span class="badge bg-warning">Еврокубки</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-card product-card--new">
-                    <div class="product-card__badge">Новинка</div>
-                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Шарф клуба">
-                    <h3 class="product-card__title">Фанатский шарф</h3>
-                    <p class="product-card__price">
-                        <span class="product-card__price-current">1500 ₽</span>
-                    </p>
-                    <button class="product-card__button">Купить</button>
+            </section>
+
+            <!-- About Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-info-circle text-primary"></i>
+                            О клубе
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Футбольный клуб «Ак Барс» - гордость Татарстана и один из сильнейших клубов российского футбола. 
+                            Команда выступает на современном стадионе «Ак Барс Арена» вместимостью 45 тысяч зрителей.
+                        </p>
+                        <p class="card-text">
+                            Клуб известен своей сильной академией, воспитывающей молодые таланты, и болельщиками, 
+                            создающими неповторимую атмосферу на домашних матчах.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-graph-up text-primary"></i>
+                            Статистика сезона
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Победы</span>
+                                        <span class="text-primary">65%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-primary" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Забитые голы</span>
+                                        <span class="text-primary">78%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Посещаемость</span>
+                                        <span class="text-primary">85%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-info" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <span>Результативность</span>
+                                        <span class="text-primary">72%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-warning" style="width: 72%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Matches Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-calendar-event text-primary"></i>
+                            Ближайшие матчи
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Ак Барс - Спартак</h5>
+                                        <p class="card-text small text-muted">
+                                            15 ноября, 19:00<br>
+                                            Ак Барс Арена
+                                        </p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-primary">Чемпионат</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm">Купить билет</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Зенит - Ак Барс</h5>
+                                        <p class="card-text small text-muted">
+                                            22 ноября, 18:30<br>
+                                            Газпром Арена
+                                        </p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-success">Кубок</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm">Купить билет</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Ак Барс - ЦСКА</h5>
+                                        <p class="card-text small text-muted">
+                                            29 ноября, 20:00<br>
+                                            Ак Барс Арена
+                                        </p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-info">Еврокубки</span>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm">Купить билет</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Татарстан Футбол. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
                 </div>
             </div>
-        </section>
+        </footer>
+    </div>
 
-    </main>
-
-    <footer class="footer">
-        <p class="footer__text">&copy; 2024 Татарстан Футбол</p>
-    </footer>
-</div>
-
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
