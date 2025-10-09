@@ -11,7 +11,7 @@
 <body>
     <div class="page-container">
         <header class="header">
-            <div class="header-content">Татарская школа футбола</div>
+            <h1>Контакты</h1>
         </header>
         
         <nav class="nav">
@@ -25,28 +25,135 @@
         </nav>
 
         <main class="content">
-            <h1 class="page-title">Наши контакты</h1>
-            
-            <div class="contacts-container">
-                <div class="contact-info">
-                    <p class="contact-item"><strong>Адрес электронной почты:</strong> info@tatar-football.ru</p>
-                    <p class="contact-item"><strong>Адрес:</strong> г. Казань, ул. Спортивная, д. 15</p>
-                    <p class="contact-item"><strong>Телефон:</strong> +7 (843) 123-45-67</p>
-                    <p class="contact-item"><strong>График работы:</strong><br>
-                        Пн-Пт: 9:00 - 21:00<br>
-                        Сб-Вс: 10:00 - 18:00
-                    </p>
+            <section class="contacts-container">
+                <h2 class="section-title">Наши контакты</h2>
+                
+                <article class="contact-info">
+                    <h3>Электронная почта</h3>
+                    <p>Адрес электронной почты: info@tatar-football.ru</p>
+                </article>
+                
+                <article class="contact-info">
+                    <h3>Физический адрес</h3>
+                    <p>Адрес: г. Казань, ул. Спортивная, д. 15</p>
+                </article>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3>Телефон</h3>
+                        <p>+7 (843) 123-45-67</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Время работы</h3>
+                        <p>Пн-Пт: 9:00-21:00<br>Сб-Вс: 10:00-18:00</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Социальные сети</h3>
+                        <p>VK, Telegram, WhatsApp</p>
+                    </div>
                 </div>
                 
-                <button class="call-button" onclick="alert('Наш телефон: +7 (843) 123-45-67')">
-                    Позвоните мне
-                </button>
-            </div>
+                <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
+            </section>
         </main>
 
         <footer class="footer">
-            <div class="footer-content">&copy; 2025 Татарская школа футбола. Все права защищены.</div>
+            <p>&copy; 2025 Татарская школа футбола. Все права защищены.</p>
         </footer>
+
+        
+        <dialog id="contactModal">
+            <div class="modal-header">
+                <h2>Форма обратной связи</h2>
+            </div>
+
+            <div class="modal-content">
+                <form id="feedbackForm" method="dialog">
+                    <div class="form-group">
+                        <label for="name">Имя <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (XXX) XXX-XX-XX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Электронная почта <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Категория обращения <span class="required">*</span></label>
+                        <select id="category" name="category" required>
+                            <option value="">Выберите категорию</option>
+                            <option value="training">Запись на тренировки</option>
+                            <option value="equipment">Покупка формы</option>
+                            <option value="cooperation">Сотрудничество</option>
+                            <option value="question">Вопрос тренеру</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Текст обращения <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="Опишите вашу проблему или вопрос..."></textarea>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="submit" class="btn btn-secondary">Отмена</button>
+                        <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+
+        <script>
+            
+            function submitForm() {
+                const form = document.getElementById('feedbackForm');
+                const formData = new FormData(form);
+
+                
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                
+                const data = {
+                    name: formData.get('name'),
+                    phone: formData.get('phone'),
+                    email: formData.get('email'),
+                    category: formData.get('category'),
+                    message: formData.get('message')
+                };
+
+       
+                console.log('Данные формы:', data);
+
+                alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
+
+                
+                contactModal.close();
+                form.reset();
+            }
+
+            
+            document.getElementById('contactModal').addEventListener('click', function(event) {
+                if (event.target === this) {
+                    this.close();
+                }
+            });
+
+            
+            document.getElementById('feedbackForm').addEventListener('keypress', function(event) {
+                if (event.key === 'Enter' && event.target.type !== 'textarea') {
+                    event.preventDefault();
+                }
+            });
+        </script>
     </div>
 </body>
 </html>
