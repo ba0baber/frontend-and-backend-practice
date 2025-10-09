@@ -11,7 +11,7 @@
 <body>
     <div class="page-container">
         <header class="header">
-            <h1>Контакты</h1>
+            <div class="header-content">Татарская школа футбола</div>
         </header>
         
         <nav class="nav">
@@ -25,40 +25,27 @@
         </nav>
 
         <main class="content">
-            <section class="contacts-container">
-                <h2 class="section-title">Наши контакты</h2>
-                
-                <article class="contact-info">
-                    <h3>Электронная почта</h3>
-                    <p>Адрес электронной почты: info@tatar-football.ru</p>
-                </article>
-                
-                <article class="contact-info">
-                    <h3>Физический адрес</h3>
-                    <p>Адрес: г. Казань, ул. Спортивная, д. 15</p>
-                </article>
-                
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <h3>Телефон</h3>
-                        <p>+7 (843) 123-45-67</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Время работы</h3>
-                        <p>Пн-Пт: 9:00-21:00<br>Сб-Вс: 10:00-18:00</p>
-                    </div>
-                    <div class="contact-item">
-                        <h3>Социальные сети</h3>
-                        <p>VK, Telegram, WhatsApp</p>
-                    </div>
+            <h1 class="page-title">Наши контакты</h1>
+            
+            <div class="contacts-container">
+                <div class="contact-info">
+                    <p class="contact-item"><strong>Адрес электронной почты:</strong> info@tatar-football.ru</p>
+                    <p class="contact-item"><strong>Адрес:</strong> г. Казань, ул. Спортивная, д. 15</p>
+                    <p class="contact-item"><strong>Телефон:</strong> +7 (843) 123-45-67</p>
+                    <p class="contact-item"><strong>График работы:</strong><br>
+                        Пн-Пт: 9:00 - 21:00<br>
+                        Сб-Вс: 10:00 - 18:00
+                    </p>
                 </div>
                 
-                <button class="contact-button" onclick="contactModal.showModal()">Связаться с нами</button>
-            </section>
+                <button class="call-button" onclick="contactModal.showModal()">
+                    Позвоните мне
+                </button>
+            </div>
         </main>
 
         <footer class="footer">
-            <p>&copy; 2025 Татарская школа футбола. Все права защищены.</p>
+            <div class="footer-content">&copy; 2025 Татарская школа футбола. Все права защищены.</div>
         </footer>
 
         
@@ -115,7 +102,7 @@
                 const form = document.getElementById('feedbackForm');
                 const formData = new FormData(form);
 
-                
+              
                 if (!form.checkValidity()) {
                     form.reportValidity();
                     return;
@@ -130,17 +117,20 @@
                     message: formData.get('message')
                 };
 
-       
+                
                 console.log('Данные формы:', data);
 
+               
                 alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
 
-                
+               
                 contactModal.close();
+
+                
                 form.reset();
             }
 
-            
+          
             document.getElementById('contactModal').addEventListener('click', function(event) {
                 if (event.target === this) {
                     this.close();
