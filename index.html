@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Портфолио</title>
-    <link rel="stylesheet" href="style/styles.css">
+    <title>Татарстан Футбол - Главная</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body data-theme="light">
-<!-- Основной контейнер -->
 <div class="page">
 
-    <!-- Шапка -->
     <header class="header">
-        <h1 class="header__title">Моё портфолио</h1>
+        <h1 class="header__title">Татарстан Футбол</h1>
         <button class="theme-toggle" id="themeToggle">
             <span class="theme-toggle__icon">🌙</span>
             <span class="theme-toggle__text">Тёмная тема</span>
         </button>
     </header>
 
-    <!-- Навигация -->
     <nav class="nav">
         <ul class="nav__list">
             <li class="nav__item nav__item--active">
@@ -34,96 +31,89 @@
         </ul>
     </nav>
 
-    <!-- Основной контент -->
     <main class="main">
 
-        <!-- Профиль -->
         <section class="profile">
             <div class="profile__card">
-                <img class="profile__photo" src="images/photo.png" alt="Фото">
+                <img class="profile__photo" src="images/akbars.png" alt="ФК Ак Барс">
                 <div class="profile__info">
-                    <h2 class="profile__name">Иванов Иван</h2>
-                    <p class="profile__group">3060-01-22</p>
+                    <h2 class="profile__name">ФК Ак Барс</h2>
+                    <p class="profile__group">Основан в 1958 году</p>
                 </div>
             </div>
         </section>
 
-        <!-- Обо мне -->
         <section class="about">
-            <h2 class="about__title">Обо мне</h2>
+            <h2 class="about__title">О клубе</h2>
             <div class="about__content">
                 <p class="about__text">
-                    Студент, увлекаюсь веб-разработкой. Изучаю HTML, CSS и JavaScript.
-                    Люблю создавать красивые и функциональные сайты.
+                    Казанский футбольный клуб «Ак Барс» - один из ведущих футбольных клубов Татарстана. 
+                    Многократный чемпион Премьер-лиги, обладатель Кубка России. Домашний стадион - «Ак Барс Арена».
                 </p>
             </div>
         </section>
 
-        <!-- Навыки -->
         <section class="skills">
-            <h2 class="skills__title">Мои навыки</h2>
+            <h2 class="skills__title">Достижения</h2>
             <div class="skills__list">
                 <div class="skill skill--html">
-                    <span class="skill__name">HTML</span>
+                    <span class="skill__name">Чемпион РФ</span>
                 </div>
                 <div class="skill skill--css">
-                    <span class="skill__name">CSS</span>
+                    <span class="skill__name">Кубок России</span>
                 </div>
                 <div class="skill skill--js">
-                    <span class="skill__name">JavaScript</span>
+                    <span class="skill__name">Суперкубок</span>
                 </div>
             </div>
         </section>
 
-        <!-- Проекты -->
         <section class="projects">
-            <h2 class="projects__title">Проекты</h2>
+            <h2 class="projects__title">Ближайшие матчи</h2>
             <div class="projects__grid">
                 <div class="project-card">
-                    <h3 class="project-card__title">Личный сайт</h3>
-                    <p class="project-card__desc">Сайт-портфолио на HTML и CSS</p>
+                    <h3 class="project-card__title">Ак Барс - Спартак</h3>
+                    <p class="project-card__desc">15 ноября, 19:00, Ак Барс Арена</p>
                 </div>
                 <div class="project-card">
-                    <h3 class="project-card__title">Todo приложение</h3>
-                    <p class="project-card__desc">Простое приложение для задач</p>
+                    <h3 class="project-card__title">Зенит - Ак Барс</h3>
+                    <p class="project-card__desc">22 ноября, 18:30, Газпром Арена</p>
                 </div>
             </div>
         </section>
 
-        <!-- Товары (новая секция) -->
         <section class="products">
-            <h2 class="products__title">Рекомендуемые товары</h2>
+            <h2 class="products__title">Фанатская атрибутика</h2>
             <div class="products__grid">
-                <div class="product-card" data-state="default">
-                    <div class="product-card__badge product-card__badge--sale">Скидка 20%</div>
-                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Товар 1">
-                    <h3 class="product-card__title">Ноутбук игровой</h3>
+                <div class="product-card product-card--sale">
+                    <div class="product-card__badge">Скидка 20%</div>
+                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Форма клуба">
+                    <h3 class="product-card__title">Игровая форма</h3>
                     <p class="product-card__price">
-                        <span class="product-card__price--old">50 000 ₽</span>
-                        <span class="product-card__price--current">40 000 ₽</span>
+                        <span class="product-card__price-old">5000 ₽</span>
+                        <span class="product-card__price-current">4000 ₽</span>
                     </p>
-                    <button class="product-card__button">В корзину</button>
+                    <button class="product-card__button">Купить</button>
                 </div>
-                <div class="product-card product-card--selected" data-state="selected">
-                    <div class="product-card__badge product-card__badge--new">Новинка</div>
-                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Товар 2">
-                    <h3 class="product-card__title">Смартфон</h3>
+                <div class="product-card product-card--new">
+                    <div class="product-card__badge">Новинка</div>
+                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Шарф клуба">
+                    <h3 class="product-card__title">Фанатский шарф</h3>
                     <p class="product-card__price">
-                        <span class="product-card__price--current">25 000 ₽</span>
+                        <span class="product-card__price-current">1500 ₽</span>
                     </p>
-                    <button class="product-card__button">В корзину</button>
+                    <button class="product-card__button">Купить</button>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Подвал -->
     <footer class="footer">
-        <p class="footer__text">&copy; 2024 Мой сайт</p>
+        <p class="footer__text">&copy; 2024 Татарстан Футбол</p>
     </footer>
 </div>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
