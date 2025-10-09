@@ -3,68 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - Татарская школа футбола</title>
-    <meta name="description" content="Официальный сайт Татарской школы футбола. Тренировки, матчи, новости">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Главная - Портфолио</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
-<body>
-    <div class="page-container">
-        <header class="header">
-            <div class="header-content">Татарская школа футбола</div>
-        </header>
-        
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
-                <li class="nav-item"><a href="pages/news.html" class="nav-link">Новости</a></li>
-                <li class="nav-item"><a href="pages/practices.html" class="nav-link">Тренировки</a></li>
-                <li class="nav-item"><a href="pages/goods.html" class="nav-link">Форма</a></li>
-                <li class="nav-item"><a href="pages/contacts.html" class="nav-link">Контакты</a></li>
-            </ul>
-        </nav>
+<body data-theme="light">
+<!-- Основной контейнер -->
+<div class="page">
 
-        <main class="content">
-            <div class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="images/fizruk.jpeg" alt="Фото автора">
-                <h2 class="profile-name">Пичугина Аделина Владиславовна</h2>
-                <p class="profile-group">Тренер-преподаватель</p>
-            </div>
+    <!-- Шапка -->
+    <header class="header">
+        <h1 class="header__title">Моё портфолио</h1>
+        <button class="theme-toggle" id="themeToggle">
+            <span class="theme-toggle__icon">🌙</span>
+            <span class="theme-toggle__text">Тёмная тема</span>
+        </button>
+    </header>
 
-            <div class="about-me">
-                <p>Обо мне: Я профессиональный футбольный тренер с 10-летним опытом работы. 
-                   Специализируюсь на подготовке молодых талантов. Моя методика сочетает 
-                   традиционные татарские спортивные традиции с современными футбольными технологиями.</p>
-            </div>
+    <!-- Навигация -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+                <a class="nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="pages/news.html">Новости</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="pages/contacts.html">Контакты</a>
+            </li>
+        </ul>
+    </nav>
 
-            <div class="skills-container">
-                <div class="skill-tag">Техника владения мячом</div>
-                <div class="skill-tag">Тактическая подготовка</div>
-                <div class="skill-tag">Физическая выносливость</div>
-                <div class="skill-tag">Командная игра</div>
-            </div>
+    <!-- Основной контент -->
+    <main class="main">
 
-            <div class="experience-section">
-                <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-card">
-                    <h3 class="experience-title">Тренер юношеской команды</h3>
-                    <p class="experience-desc">Футбольная академия "Спартак", 2015-2018 гг.</p>
-                </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Главный тренер</h3>
-                    <p class="experience-desc">ДЮСШ "Зенит", 2018-2021 гг.</p>
-                </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Основатель Татарской школы футбола</h3>
-                    <p class="experience-desc">2021 г. - настоящее время</p>
+        <!-- Профиль -->
+        <section class="profile">
+            <div class="profile__card">
+                <img class="profile__photo" src="images/photo.png" alt="Фото">
+                <div class="profile__info">
+                    <h2 class="profile__name">Иванов Иван</h2>
+                    <p class="profile__group">3060-01-22</p>
                 </div>
             </div>
-        </main>
+        </section>
 
-        <footer class="footer">
-            <div class="footer-content">&copy; 2025 Татарская школа футбола. Все права защищены.</div>
-        </footer>
-    </div>
+        <!-- Обо мне -->
+        <section class="about">
+            <h2 class="about__title">Обо мне</h2>
+            <div class="about__content">
+                <p class="about__text">
+                    Студент, увлекаюсь веб-разработкой. Изучаю HTML, CSS и JavaScript.
+                    Люблю создавать красивые и функциональные сайты.
+                </p>
+            </div>
+        </section>
+
+        <!-- Навыки -->
+        <section class="skills">
+            <h2 class="skills__title">Мои навыки</h2>
+            <div class="skills__list">
+                <div class="skill skill--html">
+                    <span class="skill__name">HTML</span>
+                </div>
+                <div class="skill skill--css">
+                    <span class="skill__name">CSS</span>
+                </div>
+                <div class="skill skill--js">
+                    <span class="skill__name">JavaScript</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Проекты -->
+        <section class="projects">
+            <h2 class="projects__title">Проекты</h2>
+            <div class="projects__grid">
+                <div class="project-card">
+                    <h3 class="project-card__title">Личный сайт</h3>
+                    <p class="project-card__desc">Сайт-портфолио на HTML и CSS</p>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-card__title">Todo приложение</h3>
+                    <p class="project-card__desc">Простое приложение для задач</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Товары (новая секция) -->
+        <section class="products">
+            <h2 class="products__title">Рекомендуемые товары</h2>
+            <div class="products__grid">
+                <div class="product-card" data-state="default">
+                    <div class="product-card__badge product-card__badge--sale">Скидка 20%</div>
+                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Товар 1">
+                    <h3 class="product-card__title">Ноутбук игровой</h3>
+                    <p class="product-card__price">
+                        <span class="product-card__price--old">50 000 ₽</span>
+                        <span class="product-card__price--current">40 000 ₽</span>
+                    </p>
+                    <button class="product-card__button">В корзину</button>
+                </div>
+                <div class="product-card product-card--selected" data-state="selected">
+                    <div class="product-card__badge product-card__badge--new">Новинка</div>
+                    <img class="product-card__image" src="https://via.placeholder.com/200" alt="Товар 2">
+                    <h3 class="product-card__title">Смартфон</h3>
+                    <p class="product-card__price">
+                        <span class="product-card__price--current">25 000 ₽</span>
+                    </p>
+                    <button class="product-card__button">В корзину</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 Мой сайт</p>
+    </footer>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
