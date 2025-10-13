@@ -9,28 +9,35 @@
     <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div class="page-container">
+    <div class="page">
         <header class="header">
-            <div class="header-content">Татарская школа футбола</div>
+            <div class="header__content">
+                <h1 class="header__title">Татарская школа футбола</h1>
+                <p class="header__subtitle">Новости и события</p>
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="theme-toggle__icon">🌙</span>
+                    <span class="theme-toggle__text">Тёмная тема</span>
+                </button>
+            </div>
         </header>
         
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a href="../index.html" class="nav-link">Главная</a></li>
-                <li class="nav-item"><a href="news.html" class="nav-link">Новости</a></li>
-                <li class="nav-item"><a href="practices.html" class="nav-link">Тренировки</a></li>
-                <li class="nav-item"><a href="goods.html" class="nav-link">Форма</a></li>
-                <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="../index.html" class="nav__link">Главная</a></li>
+                <li class="nav__item nav__item--active"><a href="news.html" class="nav__link">Новости</a></li>
+                <li class="nav__item"><a href="practices.html" class="nav__link">Тренировки</a></li>
+                <li class="nav__item"><a href="goods.html" class="nav__link">Форма</a></li>
+                <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
             </ul>
         </nav>
 
-        <main class="content">
+        <main class="main">
             <h1 class="page-title">Последние новости</h1>
             
             <div class="news-container">
                 <div class="news-item">
                     <h2 class="news-title">Открытие нового футбольного сезона</h2>
-                    <p class="news-meta">15.01.2026 10:00 Тренерский состав</p>
+                    <p class="news-meta">15.01.2025 10:00 Тренерский состав</p>
                     <p class="news-text">Мы рады объявить о начале нового футбольного сезона! Тренировки начинаются с 20 января. 
                        Ждем всех наших учеников на традиционном открытом уроке.</p>
                 </div>
@@ -44,16 +51,5 @@
                 
                 <div class="news-item">
                     <h2 class="news-title">Мастер-класс от звезды футбола</h2>
-                    <p class="news-meta">05.01.2026 11:15 Пресс-служба</p>
-                    <p class="news-text">В феврале состоится мастер-класс от известного футболиста. Следите за расписанием 
-                       и не упустите возможность поучиться у профессионала!</p>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-content">&copy; 2025 Татарская школа футбола. Все права защищены.</div>
-        </footer>
-    </div>
-</body>
-</html>
+                    <p class="news-meta">05.01.2025 11:15 Пресс-служба</p>
+                    <img src="../assets/fizruk.jpeg" alt="Мастер-класс" style="width

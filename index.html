@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Татарстан Футбол - Главная</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
 </head>
 <body data-theme="light">
 <div class="page">
 
     <header class="header">
         <div class="header__content">
-            <h1 class="header__title">
-                <span class="header__logo">⚽</span>
-                Татарстан Футбол
-            </h1>
+            <h1 class="header__title">Татарстан Футбол</h1>
+            <p class="header__subtitle">ФК Ак Барс - гордость Татарстана</p>
             <button class="theme-toggle" id="themeToggle">
                 <span class="theme-toggle__icon">🌙</span>
                 <span class="theme-toggle__text">Тёмная тема</span>
@@ -26,28 +23,19 @@
     <nav class="nav">
         <ul class="nav__list">
             <li class="nav__item nav__item--active">
-                <a class="nav__link" href="index.html">
-                    <span class="nav__icon">🏠</span>
-                    Главная
-                </a>
+                <a class="nav__link" href="index.html">Главная</a>
             </li>
             <li class="nav__item">
-                <a class="nav__link" href="pages/news.html">
-                    <span class="nav__icon">📰</span>
-                    Новости
-                </a>
+                <a class="nav__link" href="pages/news.html">Новости</a>
             </li>
             <li class="nav__item">
-                <a class="nav__link" href="pages/contacts.html">
-                    <span class="nav__icon">📞</span>
-                    Контакты
-                </a>
+                <a class="nav__link" href="pages/practices.html">Тренировки</a>
             </li>
             <li class="nav__item">
-                <a class="nav__link" href="pages/goods.html">
-                    <span class="nav__icon">🛍️</span>
-                    Магазин
-                </a>
+                <a class="nav__link" href="pages/goods.html">Форма</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="pages/contacts.html">Контакты</a>
             </li>
         </ul>
     </nav>
@@ -55,22 +43,20 @@
     <main class="main">
         <!-- Герой секция -->
         <section class="hero">
-            <div class="hero__content">
-                <h2 class="hero__title">ФК Ак Барс Казань</h2>
-                <p class="hero__subtitle">Гордость Татарстана с 1958 года</p>
-                <div class="hero__stats">
-                    <div class="stat">
-                        <span class="stat__number">5</span>
-                        <span class="stat__label">Чемпионств</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">3</span>
-                        <span class="stat__label">Кубка России</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat__number">45k</span>
-                        <span class="stat__label">Вместимость стадиона</span>
-                    </div>
+            <h2 class="hero__title">ФК Ак Барс Казань</h2>
+            <p class="hero__subtitle">Гордость Татарстана с 1958 года</p>
+            <div class="hero__stats">
+                <div class="stat">
+                    <span class="stat__number">5</span>
+                    <span class="stat__label">Чемпионств</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">3</span>
+                    <span class="stat__label">Кубка России</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">45k</span>
+                    <span class="stat__label">Вместимость стадиона</span>
                 </div>
             </div>
         </section>
@@ -79,7 +65,7 @@
         <section class="profile">
             <div class="profile__card">
                 <div class="profile__image-container">
-                    <img class="profile__photo" src="https://via.placeholder.com/200x200/2c3e50/ffffff?text=AK+BARS" alt="ФК Ак Барс">
+                    <img class="profile__photo" src="assets/logo.png" alt="ФК Ак Барс">
                     <div class="profile__badge">Основан 1958</div>
                 </div>
                 <div class="profile__info">
@@ -105,10 +91,7 @@
 
         <!-- О клубе -->
         <section class="about">
-            <div class="about__header">
-                <h2 class="about__title">О клубе</h2>
-                <div class="about__decoration"></div>
-            </div>
+            <h2 class="about__title">О клубе</h2>
             <div class="about__content">
                 <p class="about__text">
                     Футбольный клуб «Ак Барс» - гордость Татарстана и один из сильнейших клубов российского футбола. 
@@ -140,17 +123,14 @@
             <h2 class="skills__title">Наши достижения</h2>
             <div class="skills__list">
                 <div class="skill skill--champion">
-                    <div class="skill__icon">🏆</div>
                     <span class="skill__name">Чемпион РФ</span>
                     <span class="skill__count">5 раз</span>
                 </div>
                 <div class="skill skill--cup">
-                    <div class="skill__icon">🥇</div>
                     <span class="skill__name">Кубок России</span>
                     <span class="skill__count">3 раза</span>
                 </div>
                 <div class="skill skill--supercup">
-                    <div class="skill__icon">🛡️</div>
                     <span class="skill__name">Суперкубок</span>
                     <span class="skill__count">2 раза</span>
                 </div>
@@ -161,7 +141,7 @@
         <section class="projects">
             <h2 class="projects__title">Ближайшие матчи</h2>
             <div class="projects__grid">
-                <div class="project-card project-card--home">
+                <div class="project-card">
                     <div class="project-card__header">
                         <span class="project-card__badge">Домашний</span>
                         <span class="project-card__date">15.11.2024</span>
@@ -173,7 +153,7 @@
                         <button class="project-card__button">Купить</button>
                     </div>
                 </div>
-                <div class="project-card project-card--away">
+                <div class="project-card">
                     <div class="project-card__header">
                         <span class="project-card__badge">Выездной</span>
                         <span class="project-card__date">22.11.2024</span>
@@ -185,7 +165,7 @@
                         <button class="project-card__button">Инфо</button>
                     </div>
                 </div>
-                <div class="project-card project-card--euro">
+                <div class="project-card">
                     <div class="project-card__header">
                         <span class="project-card__badge">Еврокубки</span>
                         <span class="project-card__date">29.11.2024</span>
@@ -206,7 +186,7 @@
             <div class="products__grid">
                 <div class="product-card product-card--sale">
                     <div class="product-card__badge">Скидка 20%</div>
-                    <img class="product-card__image" src="https://via.placeholder.com/280x200/3498db/ffffff?text=Форма+2024" alt="Игровая форма">
+                    <img class="product-card__image" src="assets/footforma.webp" alt="Игровая форма">
                     <h3 class="product-card__title">Домашняя форма 2024</h3>
                     <p class="product-card__desc">Официальная игровая форма сезона</p>
                     <div class="product-card__price">
@@ -217,7 +197,7 @@
                 </div>
                 <div class="product-card product-card--new">
                     <div class="product-card__badge">Новинка</div>
-                    <img class="product-card__image" src="https://via.placeholder.com/280x200/e74c3c/ffffff?text=Фанатский+шарф" alt="Фанатский шарф">
+                    <img class="product-card__image" src="assets/domforma.webp" alt="Фанатский шарф">
                     <h3 class="product-card__title">Фанатский шарф</h3>
                     <p class="product-card__desc">Теплый шарф с символикой клуба</p>
                     <div class="product-card__price">
@@ -226,12 +206,11 @@
                     <button class="product-card__button">В корзину</button>
                 </div>
                 <div class="product-card">
-                    <div class="product-card__badge">Хит</div>
-                    <img class="product-card__image" src="https://via.placeholder.com/280x200/2ecc71/ffffff?text=Клубная+бейсболка" alt="Бейсболка">
-                    <h3 class="product-card__title">Клубная бейсболка</h3>
-                    <p class="product-card__desc">Стильная бейсболка для болельщиков</p>
+                    <img class="product-card__image" src="assets/bol.jpg" alt="Футбольный мяч">
+                    <h3 class="product-card__title">Футбольный мяч</h3>
+                    <p class="product-card__desc">Официальный мяч с символикой клуба</p>
                     <div class="product-card__price">
-                        <span class="product-card__price-current">1200 ₽</span>
+                        <span class="product-card__price-current">3000 ₽</span>
                     </div>
                     <button class="product-card__button">В корзину</button>
                 </div>
@@ -242,26 +221,7 @@
 
     <footer class="footer">
         <div class="footer__content">
-            <div class="footer__info">
-                <h3 class="footer__title">Татарстан Футбол</h3>
-                <p class="footer__text">Официальный сайт футбольных клубов Татарстана</p>
-            </div>
-            <div class="footer__links">
-                <a href="#" class="footer__link">О нас</a>
-                <a href="#" class="footer__link">Контакты</a>
-                <a href="#" class="footer__link">Поддержка</a>
-            </div>
-            <div class="footer__social">
-                <span class="footer__social-text">Мы в соцсетях:</span>
-                <div class="social__links">
-                    <a href="#" class="social__link">📘</a>
-                    <a href="#" class="social__link">📷</a>
-                    <a href="#" class="social__link">🐦</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <p class="footer__copyright">&copy; 2024 Татарстан Футбол. Все права защищены.</p>
+            &copy; 2024 Татарстан Футбол. Все права защищены.
         </div>
     </footer>
 </div>
