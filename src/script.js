@@ -36,24 +36,39 @@ class ThemeManager {
     }
 }
 
-// Функции для модального окна контактов
+
 function initContactModal() {
     const contactModal = document.getElementById('contactModal');
     const feedbackForm = document.getElementById('feedbackForm');
     
     if (!contactModal || !feedbackForm) return;
     
+ 
     contactModal.addEventListener('click', function(event) {
-        if (event.target === this) {
+        const rect = contactModal.getBoundingClientRect();
+        if (
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        ) {
             this.close();
         }
     });
-    
+
     feedbackForm.addEventListener('keypress', function(event) {
         if (event.key === 'Enter' && event.target.type !== 'textarea') {
             event.preventDefault();
         }
     });
+
+    const cancelButton = feedbackForm.querySelector('button[type="submit"]');
+    if (cancelButton) {
+        cancelButton.addEventListener('click', function() {
+            contactModal.close();
+            feedbackForm.reset();
+        });
+    }
 }
 
 function submitForm() {
@@ -82,7 +97,6 @@ function submitForm() {
     contactModal.close();
     form.reset();
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
