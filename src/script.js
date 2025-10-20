@@ -22,7 +22,7 @@ class ThemeManager {
     }
     
     applyTheme(theme) {
-        document.body.setAttribute('data-theme', theme);
+        document.documentElement.setAttribute('data-theme', theme);
         
         if (this.themeIcon && this.themeText) {
             if (theme === 'dark') {
@@ -36,14 +36,12 @@ class ThemeManager {
     }
 }
 
-
 function initContactModal() {
     const contactModal = document.getElementById('contactModal');
     const feedbackForm = document.getElementById('feedbackForm');
     
     if (!contactModal || !feedbackForm) return;
-    
- 
+
     contactModal.addEventListener('click', function(event) {
         const rect = contactModal.getBoundingClientRect();
         if (
@@ -55,6 +53,7 @@ function initContactModal() {
             this.close();
         }
     });
+    
 
     feedbackForm.addEventListener('keypress', function(event) {
         if (event.key === 'Enter' && event.target.type !== 'textarea') {
@@ -101,4 +100,8 @@ function submitForm() {
 document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
     initContactModal();
+    
+    
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
 });
