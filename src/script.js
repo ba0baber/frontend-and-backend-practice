@@ -23,7 +23,6 @@ class ThemeManager {
     
     applyTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
-        
         if (this.themeIcon && this.themeText) {
             if (theme === 'dark') {
                 this.themeIcon.textContent = '☀️';
@@ -31,6 +30,13 @@ class ThemeManager {
             } else {
                 this.themeIcon.textContent = '🌙';
                 this.themeText.textContent = 'Тёмная тема';
+            }
+        }
+        if (this.themeToggle && !this.themeIcon) {
+            if (theme === 'dark') {
+                this.themeToggle.innerHTML = '<i class="bi bi-sun"></i> Светлая тема';
+            } else {
+                this.themeToggle.innerHTML = '<i class="bi bi-moon"></i> Тёмная тема';
             }
         }
     }
@@ -100,8 +106,23 @@ function submitForm() {
 document.addEventListener('DOMContentLoaded', () => {
     new ThemeManager();
     initContactModal();
-    
-    
+
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        if (savedTheme === 'dark') {
+            themeToggle.innerHTML = themeToggle.querySelector('.theme-toggle__icon') 
+                ? themeToggle.innerHTML 
+                : '<i class="bi bi-sun"></i> Светлая тема';
+        } else {
+            themeToggle.innerHTML = themeToggle.querySelector('.theme-toggle__icon') 
+                ? themeToggle.innerHTML 
+                : '<i class="bi bi-moon"></i> Тёмная тема';
+        }
+    }
 });
+
+console.log('ThemeManager загружен');
+console.log('Текущая тема:', localStorage.getItem('theme'));
+console.log('Кнопка переключения темы:', document.getElementById('themeToggle'));
