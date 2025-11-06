@@ -70,7 +70,7 @@
             </div>
 
             <div class="modal-content">
-                <form id="feedbackForm" method="dialog">
+                <form id="feedbackForm">
                     <div class="form-group">
                         <label for="name">Имя <span class="required">*</span></label>
                         <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
@@ -104,7 +104,7 @@
                     </div>
 
                     <div class="modal-actions">
-                        <button type="submit" class="btn btn-secondary">Отмена</button>
+                        <button type="button" class="btn btn-secondary" onclick="clearForm()">Отмена</button>
                         <button type="button" class="btn btn-primary" onclick="submitForm()">Отправить</button>
                     </div>
                 </form>
