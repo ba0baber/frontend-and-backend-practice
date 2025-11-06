@@ -27,8 +27,98 @@
     --color-white: #34495e;
     --color-secondary: #c0392b;
     --color-success: #229954;
+    
+    --shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
+/* Стили для Bootstrap в темной теме */
+[data-theme="dark"] .bg-light {
+    background-color: var(--color-dark) !important;
+}
+
+[data-theme="dark"] .text-primary {
+    color: var(--color-accent) !important;
+}
+
+[data-theme="dark"] .bg-primary {
+    background-color: var(--color-main) !important;
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--color-white);
+    border-color: var(--color-dark);
+}
+
+[data-theme="dark"] .text-muted {
+    color: #95a5a6 !important;
+}
+
+[data-theme="dark"] .bg-dark {
+    background-color: #2c3e50 !important;
+}
+
+[data-theme="dark"] .btn-light {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: var(--color-white) !important;
+}
+
+[data-theme="dark"] .text-dark {
+    color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .text-white {
+    color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .btn-secondary {
+    background-color: #7f8c8d;
+    border-color: #7f8c8d;
+    color: white;
+}
+
+[data-theme="dark"] .btn-outline-primary {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+[data-theme="dark"] .badge {
+    color: white;
+}
+
+[data-theme="dark"] .badge.bg-light {
+    background-color: var(--color-accent) !important;
+    color: white;
+}
+
+[data-theme="dark"] .opacity-75 {
+    opacity: 0.9 !important;
+}
+
+[data-theme="dark"] .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="dark"] .navbar-dark .navbar-nav .nav-link.active {
+    color: white;
+    background-color: var(--color-accent);
+}
+
+/* Основные стили для кастомных компонентов */
 * {
     margin: 0;
     padding: 0;
@@ -1001,56 +1091,426 @@ body {
     }
 }
 
-:root {
-    --color-main: #2c3e50;
-    --color-accent: #3498db;
-    --color-light: #ecf0f1;
-    --color-dark: #34495e;
-    --color-text: #2c3e50;
-    --color-white: #ffffff;
-    --color-secondary: #e74c3c;
-    --color-success: #27ae60;
-
-    --shadow: 0 2px 5px rgba(0,0,0,0.1);
-    --radius: 8px;
-    --space-sm: 10px;
-    --space-md: 20px;
-    --space-lg: 30px;
-    --space-xl: 40px;
-    --space-2xl: 60px;
-    --transition: all 0.3s ease;
+[data-theme="dark"] .page {
+    background: var(--color-white);
 }
 
-[data-theme="dark"] {
-    --color-main: #34495e;
-    --color-accent: #2980b9;
-    --color-light: #2c3e50;
-    --color-dark: #2c3e50;
-    --color-text: #ecf0f1;
-    --color-white: #34495e;
-    --color-secondary: #c0392b;
-    --color-success: #229954;
-   
-    --shadow: 0 2px 5px rgba(0,0,0,0.3);
+[data-theme="dark"] .contacts-container {
+    background: var(--color-white);
+    color: var(--color-text);
 }
 
-[data-theme="dark"] .bg-light {
-    background-color: var(--color-dark) !important;
+[data-theme="dark"] .contact-item {
+    background: var(--color-light);
+    color: var(--color-text);
 }
 
-[data-theme="dark"] .text-primary {
-    color: var(--color-accent) !important;
+[data-theme="dark"] .contact-item strong {
+    color: var(--color-text);
 }
 
-[data-theme="dark"] .bg-primary {
-    background-color: var(--color-main) !important;
+[data-theme="dark"] .call-button {
+    background: var(--color-main);
+    color: var(--color-white);
 }
 
-[data-theme="dark"] .card {
-    background-color: var(--color-white);
+[data-theme="dark"] .call-button:hover {
+    background: var(--color-accent);
+}
+
+[data-theme="dark"] .news-item {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .news-title {
+    color: var(--color-main);
+}
+
+[data-theme="dark"] .news-text {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .practice-card {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .practice-card__title {
+    color: var(--color-main);
+}
+
+[data-theme="dark"] .practice-card__desc {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .practice-feature {
+    background: var(--color-light);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .action-button--primary {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .action-button--secondary {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .action-button--outline {
+    background: transparent;
+    color: var(--color-main);
+    border: 2px solid var(--color-main);
+}
+
+[data-theme="dark"] .action-button--outline:hover {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .info-card {
+    background: var(--color-white);
+}
+
+[data-theme="dark"] .info-card__title {
+    color: var(--color-main);
+}
+
+[data-theme="dark"] .benefit {
+    background: var(--color-light);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .benefit:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .benefit__title {
+    color: inherit;
+}
+
+[data-theme="dark"] .benefit__desc {
+    color: inherit;
+}
+
+
+[data-theme="dark"] #contactModal {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .modal-header {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .form-group label {
+    color: var(--color-main);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background: var(--color-white);
+    color: var(--color-text);
     border-color: var(--color-dark);
 }
 
-[data-theme="dark"] .text-muted {
-    color: #95a5a6 !important;
+[data-theme="dark"] .btn-primary {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: var(--color-accent);
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: #7f8c8d;
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: #95a5a6;
+}
+
+
+[data-theme="dark"] .page-title {
+    color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .contacts-container {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .contact-info {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .contact-item {
+    background: var(--color-light);
+    color: var(--color-text);
+    border: 1px solid var(--color-dark);
+}
+
+[data-theme="dark"] .contact-item strong {
+    color: var(--color-accent);
+}
+
+[data-theme="dark"] .call-button {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent);
+}
+
+[data-theme="dark"] .call-button:hover {
+    background: var(--color-main);
+    border-color: var(--color-main);
+}
+
+[data-theme="dark"] .news-container {
+    background: transparent;
+}
+
+[data-theme="dark"] .news-item {
+    background: var(--color-white);
+    color: var(--color-text);
+    border: 1px solid var(--color-dark);
+}
+
+[data-theme="dark"] .news-title {
+    color: var(--color-accent) !important;
+}
+
+[data-theme="dark"] .news-meta {
+    color: var(--color-success) !important;
+}
+
+[data-theme="dark"] .news-text {
+    color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .practices-grid {
+    background: transparent;
+}
+
+[data-theme="dark"] .practice-card {
+    background: var(--color-white);
+    color: var(--color-text);
+    border: 1px solid var(--color-dark);
+}
+
+[data-theme="dark"] .practice-card__title {
+    color: var(--color-accent) !important;
+}
+
+[data-theme="dark"] .practice-card__desc {
+    color: var(--color-text) !important;
+}
+
+[data-theme="dark"] .practice-card__schedule {
+    color: var(--color-success) !important;
+}
+
+[data-theme="dark"] .practice-card__age {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .practice-feature {
+    background: var(--color-light);
+    color: var(--color-text);
+    border: 1px solid var(--color-dark);
+}
+
+[data-theme="dark"] .practice-card__button {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent);
+}
+
+[data-theme="dark"] .practice-card__button:hover {
+    background: var(--color-main);
+    border-color: var(--color-main);
+}
+
+[data-theme="dark"] .action-button--primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent);
+}
+
+[data-theme="dark"] .action-button--primary:hover {
+    background: var(--color-main);
+    border-color: var(--color-main);
+}
+
+[data-theme="dark"] .action-button--secondary {
+    background: var(--color-success);
+    color: var(--color-white);
+    border: 2px solid var(--color-success);
+}
+
+[data-theme="dark"] .action-button--secondary:hover {
+    background: var(--color-main);
+    border-color: var(--color-main);
+}
+
+[data-theme="dark"] .action-button--outline {
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+}
+
+[data-theme="dark"] .action-button--outline:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+
+[data-theme="dark"] .info-card {
+    background: var(--color-white);
+    color: var(--color-text);
+    border: 1px solid var(--color-dark);
+}
+
+[data-theme="dark"] .info-card__title {
+    color: var(--color-accent) !important;
+}
+
+[data-theme="dark"] .benefit {
+    background: var(--color-light);
+    color: var(--color-text);
+    border: 1px solid var(--color-dark);
+}
+
+[data-theme="dark"] .benefit:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .benefit__title {
+    color: inherit;
+}
+
+[data-theme="dark"] .benefit__desc {
+    color: inherit;
+}
+
+
+[data-theme="dark"] #contactModal {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .modal-header {
+    background: var(--color-main);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .modal-content {
+    background: var(--color-white);
+}
+
+[data-theme="dark"] .form-group label {
+    color: var(--color-main);
+    font-weight: bold;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background: var(--color-light);
+    color: var(--color-text);
+    border: 2px solid var(--color-dark);
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group select:focus,
+[data-theme="dark"] .form-group textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+[data-theme="dark"] .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: 2px solid var(--color-accent);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: var(--color-main);
+    border-color: var(--color-main);
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: #7f8c8d;
+    color: var(--color-white);
+    border: 2px solid #7f8c8d;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: #95a5a6;
+    border-color: #95a5a6;
+}
+
+[data-theme="dark"] .required {
+    color: var(--color-secondary);
+}
+
+[data-theme="dark"] .main {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .main h1,
+[data-theme="dark"] .main h2,
+[data-theme="dark"] .main h3,
+[data-theme="dark"] .main h4,
+[data-theme="dark"] .main h5,
+[data-theme="dark"] .main h6 {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .main p {
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .main strong {
+    color: var(--color-accent);
+}
+/* Исправление заголовка в темной теме */
+[data-theme="dark"] .page-title {
+    color: var(--color-accent) !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .header__title {
+    color: var(--color-white) !important;
+}
+
+[data-theme="dark"] .header__subtitle {
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* Дополнительные исправления для лучшей видимости */
+[data-theme="dark"] .main h1:not(.page-title),
+[data-theme="dark"] .main h2:not(.page-title),
+[data-theme="dark"] .main h3:not(.page-title) {
+    color: var(--color-accent) !important;
+}
+
+/* Если используется Bootstrap на некоторых страницах */
+[data-theme="dark"] .display-5,
+[data-theme="dark"] .display-4,
+[data-theme="dark"] .h1,
+[data-theme="dark"] .h2,
+[data-theme="dark"] .h3,
+[data-theme="dark"] .h4,
+[data-theme="dark"] .h5,
+[data-theme="dark"] .h6 {
+    color: var(--color-accent) !important;
 }
